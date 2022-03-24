@@ -7,7 +7,7 @@ import gui as gui
 
 root.mainloop()
 path = gui.select_file
-path2 = path.encode("utf-8")
+path2 = path.decode("utf8")
 
 with open(path2, "r") as file:
     text = file.read()
@@ -33,6 +33,8 @@ with open(path2, "r") as file:
     total_count = dict()
     list(map(lambda x: count_word(''.join(filter(str.isalpha, x.lower()))), alphabet_sorted))
     print(total_count)
+
+    print('CHLENIS DOLBAEB')
 
 
 
