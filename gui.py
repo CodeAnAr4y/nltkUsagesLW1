@@ -12,6 +12,7 @@ root.resizable(False, False)
 root.geometry('300x150')
 
 frame = tk.Frame(root, bg=white)
+frame.size(1)
 
 
 def select_file():
