@@ -11,7 +11,6 @@ root.title('Tkinter Open File Dialog')
 root.resizable(False, False)
 root.geometry('300x150')
 
-frame = tk.Frame(root, bg=white)
 
 
 def select_file():
