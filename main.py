@@ -32,6 +32,54 @@ with open(filename, "r") as file:
     total_count = dict()
     list(map(lambda x: count_word(''.join(filter(str.isalpha, x.lower()))), alphabet_sorted))
     print(total_count)
+    for i in total_count:
+        print(i,':', total_count[i])
+
+    dict_with_subscription = {}
+    while True:
+        key = input('Введите слово : ')
+        if key == '0':
+            break
+        elif key == '/help':
+            print('/del - удаляет ключ + значение из словаря\n'
+                  '0 - завершение программмы\n')
+        elif key == '/del':
+            key = input('Введите ключ, который хотите удалить : ')
+            dict_with_subscription.pop(key)
+            print(dict_with_subscription)
+        else:
+            value = input('Введите описание слова : ')
+            dict_with_subscription.setdefault(key, value)
+            print(dict_with_subscription)
+    #Сохранение словаря в .txt файл
+    for i in dict_with_subscription:
+        str_with_subscription = str(dict_with_subscription)
+        print(str_with_subscription)
+with open('C:\\Users\\Archi\\Desktop\\Data Base', "a") as file:
+    text = file.write(str_with_subscription)
+
+
+
+
+
+
+    # while True:
+    #     key = input('Введите слово')
+    #     if key == '0':
+    #         break
+    #     elif key == key:
+    #         input_value = input('Введите строку значения слова : ')
+    #         value = []
+    #         for i in value:
+    #             value.append(input_value)
+    #         dict_with_values = total_count.setdefault(key, value)
+    #         total_count[key].append(value)
+    #         for i in total_count:
+    #             value_to_string = ', '.join(total_count[i])
+    #             print(i, ':', value_to_string)
+    #     else:
+    #         print('Что-то пошло не так')
+    #     print(dict_with_values)
 
 
 
