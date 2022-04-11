@@ -11,8 +11,6 @@ root.title('Tkinter Open File Dialog')
 root.resizable(False, False)
 root.geometry('300x150')
 
-
-
 def select_file():
     filetypes = (
         ('text files', '*.txt'),
@@ -30,6 +28,10 @@ def select_file():
     )
     return filename
 
+text = tk.Text()
+def showText():
+    text.pack()
+    root.mainloop()
 
 # open button
 open_button = ttk.Button(
